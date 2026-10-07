@@ -20,8 +20,9 @@ MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne Univ
 
 | Project | Description | Stack |
 |---|---|---|
-| [kdb-q-tickdata-analytics](https://github.com/matthieu-briche/kdb-q-tickdata-analytics) | Real-time tick architecture (tickerplant, RDB, HDB) and database creation, built as a capstone project | q, Python |
-| [quant-finance-notes](https://github.com/matthieu-briche/quant-finance-notes) | Mathematical notes on quantitative finance: stochastic calculus, pricing, risk | Math / LaTeX |
+| [kdb-hawkes-simulation-one-day](https://github.com/matthieu-briche/kdb-hawkes-simulation-one-day) | One-day order flow simulation driven by Hawkes processes, with an L2/L3 order book engine | kdb+/q |
+| [options-pricing](https://github.com/matthieu-briche/options-pricing) | Optimized option pricer with Greeks and performance benchmarks | Python |
+| [kdb-architecture-courses](https://github.com/matthieu-briche/kdb-architecture-courses) | Real-time tick architecture: tickerplant → RDB → HDB, chained TP, real-time engine, gateway | kdb+/q, PyKX |
 | [kdb-courses](https://github.com/matthieu-briche/kdb-courses) | Personal study notes and exercises on kdb+/q | q |
 
 ### Currently
