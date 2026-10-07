@@ -20,9 +20,9 @@ MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne Univ
 
 | Project | Description | Stack |
 |---|---|---|
-| [project-1](https://github.com/USERNAME/project-1) | One-line description of what it does and why it matters | q |
-| [project-2](https://github.com/USERNAME/project-2) | One-line description | q, Python |
-| [project-3](https://github.com/USERNAME/project-3) | One-line description | Python |
+| [kdb-q-tickdata-analytics](https://github.com/matthieu-briche/kdb-q-tickdata-analytics) | Real-time tick architecture (tickerplant, RDB, HDB) and database creation, built as a capstone project | q, Python |
+| [quant-finance-notes](https://github.com/matthieu-briche/quant-finance-notes) | Mathematical notes on quantitative finance: stochastic calculus, pricing, risk | Math / LaTeX |
+| [kdb-courses](https://github.com/matthieu-briche/kdb-courses) | Personal study notes and exercises on kdb+/q | q |
 
 ### 🎓 Certifications & education
 
