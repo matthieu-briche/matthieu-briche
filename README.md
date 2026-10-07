@@ -24,6 +24,10 @@ MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne Univ
 | [quant-finance-notes](https://github.com/matthieu-briche/quant-finance-notes) | Mathematical notes on quantitative finance: stochastic calculus, pricing, risk | Math / LaTeX |
 | [kdb-courses](https://github.com/matthieu-briche/kdb-courses) | Personal study notes and exercises on kdb+/q | q |
 
+### Currently
+Building market microstructure tooling in kdb+/q
+Reading Algorithmic and High-Frequency Trading (Cartea et al.) and Trades, Quotes and Prices (Bouchaud et al.)
+
 ### 🎓 Certifications & education
 
 - KX Certified kdb+/q Developer
@@ -31,5 +35,6 @@ MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne Univ
 - Executive Program in Financial Engineering – Sorbonne University (from Nov 2026)
 
 ### 📫 Contact
+Open to kdb+/q developer and market data engineering roles, in France or Switzerland (Geneva / Zurich).
 
 [LinkedIn](https://www.linkedin.com/in/matthieu-briche-aa69b441/)
