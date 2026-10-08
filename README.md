@@ -35,6 +35,14 @@ Reading Algorithmic and High-Frequency Trading (Cartea et al.) and Trades, Quote
 - MSc Applied Mathematics & Quantitative Finance – Université de Lille
 - Executive Program in Financial Engineering – Sorbonne University (from Nov 2026)
 
+- ## 🏅 Certifications
+
+[![KDB.AI Vector Database](https://img.shields.io/badge/KX-KDB.AI%20Vector%20Database-0066FF?style=for-the-badge)](assets/certif-kdbai.png)
+[![Introduction to PyKX](https://img.shields.io/badge/KX-Introduction%20to%20PyKX-1BA1A6?style=for-the-badge)](assets/certif-pykx.png)
+
+- **KDB.AI Vector Database**, KX (octobre 2024)
+- **Introduction to PyKX**, KX (octobre 2024)
+
 ### 📫 Contact
 Open to kdb+/q developer and market data engineering roles, in France or Switzerland (Geneva / Zurich).
 
