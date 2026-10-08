@@ -20,10 +20,9 @@ MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne Univ
 
 | Project | Description | Stack |
 |---|---|---|
-| [kdb-hawkes-simulation-one-day](https://github.com/matthieu-briche/kdb-hawkes-simulation-one-day) | One-day order flow simulation driven by Hawkes processes, with an L2/L3 order book engine | kdb+/q |
-| [options-pricing](https://github.com/matthieu-briche/options-pricing) | Optimized option pricer with Greeks and performance benchmarks | Python |
-| [kdb-architecture-courses](https://github.com/matthieu-briche/kdb-architecture-courses) | Real-time tick architecture: tickerplant → RDB → HDB, chained TP, real-time engine, gateway | kdb+/q, PyKX |
-| [kdb-courses](https://github.com/matthieu-briche/kdb-courses) | Personal study notes and exercises on kdb+/q | q |
+| [kdb-hawkes-simulation-one-day](https://github.com/matthieu-briche/kdb-hawkes-simulation-one-day) | Intraday quote stream driven by Hawkes processes: vectorised simulation, statistical validation, partitioned HDB, tickerplant replay and MLE parameter recovery | kdb+/q |
+| [python-options-pricing](https://github.com/matthieu-briche/python-options-pricing) | European, Asian and American option pricing (Monte Carlo, QMC, Longstaff–Schwartz, CRR), Greeks, SVI smile on real AAPL chains, hedging backtests · 233 tests | Python, NumPy, Numba |
+| [python-lob-modelling](https://github.com/matthieu-briche/python-lob-modelling) | Limit order book driven by a bivariate Hawkes order flow, live animation and MLE calibration | Python, SciPy |
 
 ### Currently
 Building market microstructure tooling in kdb+/q
