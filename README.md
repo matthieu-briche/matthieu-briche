@@ -20,6 +20,7 @@ MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne Univ
 
 | Project | Description | Stack |
 |---|---|---|
+| [kdb-q-tick-data-analytics](https://github.com/matthieu-briche/kdb-q-tick-data-analytics) | Full kdb+ tick stack driven from Python with PyKX: tickerplant, RDB, partitioned HDB, chained TP, real-time engine and gateway written in q (VWAP, live spread, `aj` trade context, realised vol), fed by Hawkes-driven market data | kdb+/q, PyKX |
 | [kdb-hawkes-simulation-one-day](https://github.com/matthieu-briche/kdb-hawkes-simulation-one-day) | Intraday quote stream driven by Hawkes processes: vectorised simulation, statistical validation, partitioned HDB, tickerplant replay and MLE parameter recovery | kdb+/q |
 | [python-options-pricing](https://github.com/matthieu-briche/python-options-pricing) | European, Asian and American option pricing (Monte Carlo, QMC, Longstaff–Schwartz, CRR), Greeks, SVI smile on real AAPL chains, hedging backtests · 233 tests | Python, NumPy, Numba |
 | [python-lob-modelling](https://github.com/matthieu-briche/python-lob-modelling) | Limit order book driven by a bivariate Hawkes order flow, live animation and MLE calibration | Python, SciPy |
