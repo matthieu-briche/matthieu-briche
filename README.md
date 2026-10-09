@@ -29,11 +29,6 @@ MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne Univ
 Building market microstructure tooling in kdb+/q
 Reading Algorithmic and High-Frequency Trading (Cartea et al.) and Trades, Quotes and Prices (Bouchaud et al.)
 
-### 🎓 Certifications & education
-
-- KX Certified kdb+/q Developer
-- MSc Applied Mathematics & Quantitative Finance – Université de Lille
-- Executive Program in Financial Engineering – Sorbonne University (from Nov 2026)
 ### 🎓 Education
 
 - MSc Applied Mathematics & Quantitative Finance – Université de Lille
@@ -48,9 +43,14 @@ Reading Algorithmic and High-Frequency Trading (Cartea et al.) and Trades, Quote
 - **q Developer Level 2**, KX Academy (March 2026)
 - **KDB.AI Vector Database**, KX (October 2024)
 - **Introduction to PyKX**, KX (October 2024)
-- **Introduction to PyKX**, KX (octobre 2024)
 
 ### 📫 Contact
 Open to kdb+/q developer and market data engineering roles, in France or Switzerland (Geneva / Zurich).
 
 [LinkedIn](https://www.linkedin.com/in/matthieu-briche-aa69b441/)
+
+---
+
+<p align="center">
+  <img src="assets/q.png" alt="q" width="120">
+</p>
