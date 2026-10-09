@@ -5,7 +5,7 @@
 KX-certified kdb+/q developer with 10 years of experience in capital markets and energy pricing.
 MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne University's Executive Program in Financial Engineering (Nov 2026): stochastic modeling, HFT & market microstructure, Monte Carlo, ML.
 
-📍 France · open to relocation to **Geneva / Zurich** · available immediately
+📍 France · open to relocation to **UK : London; Europe : Geneva / Zurich** · available immediately
 
 ---
 
