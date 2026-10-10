@@ -37,13 +37,9 @@ Reading Algorithmic and High-Frequency Trading (Cartea et al.) and Trades, Quote
 ### 🏅 Certifications
 
 [![q Developer Level 2](https://img.shields.io/badge/KX-q%20Developer%20Level%202-002B5C?style=for-the-badge)](assets/certif-q-developer-l2.png)
-[![KDB.AI Vector Database](https://img.shields.io/badge/KX-KDB.AI%20Vector%20Database-0066FF?style=for-the-badge)](assets/certif-kdbai.png)
-[![Introduction to PyKX](https://img.shields.io/badge/KX-Introduction%20to%20PyKX-1BA1A6?style=for-the-badge)](assets/certif-pykx.png)
 [![Python-KDB-X Level 2](https://img.shields.io/badge/KX-Python--KDB--X%20Level%202-00A86B?style=for-the-badge)](assets/certif-kdbx-python-l2.png)
 
 - **q Developer Level 2**, KX Academy (March 2026)
-- **KDB.AI Vector Database**, KX (October 2024)
-- **Introduction to PyKX**, KX (October 2024)
 - **KDB-X Python Leve 2**, KX (March 2026)
 
 ### 📫 Contact
