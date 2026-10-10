@@ -43,7 +43,7 @@ Reading Algorithmic and High-Frequency Trading (Cartea et al.) and Trades, Quote
 - **KDB-X Python Leve 2**, KX (March 2026)
 
 ### 📫 Contact
-Open to kdb+/q developer and market data engineering roles, in France or Switzerland (Geneva / Zurich).
+Open to kdb+/q developer and market data engineering roles, in UK, Switzerland.
 
 [LinkedIn](https://www.linkedin.com/in/matthieu-briche-aa69b441/)
 
