@@ -42,6 +42,11 @@ Reading Algorithmic and High-Frequency Trading (Cartea et al.) and Trades, Quote
 - **q Developer Level 2**, KX Academy (March 2026)
 - **KDB-X Python Leve 2**, KX (March 2026)
 
+### Technical reading
+- Q Tips (Psaris)
+- Algorithmic and High-Frequency Trading (Cartea)
+- Trades, Quotes and Prices (Bouchaud)
+  
 ### 📫 Contact
 Open to kdb+/q developer and market data engineering roles, in UK, Switzerland.
 
