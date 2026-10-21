@@ -1,59 +1,46 @@
 # Hi, I'm Matthieu 👋
 
-**Data Engineer – kdb+/q & Python | Market Data & Time Series**
+**kdb+/q developer & quant data engineer** — tick data, market microstructure, derivatives pricing.
 
-KX-certified kdb+/q developer with 10 years of experience in capital markets and energy pricing.
-MSc in Applied Mathematics & Quantitative Finance (Lille). Joining Sorbonne University's Executive Program in Financial Engineering (Nov 2026): stochastic modeling, HFT & market microstructure, Monte Carlo, ML.
-
-📍 France · open to relocation to **UK : London; Europe : Geneva / Zurich** · available immediately
+- 🎓 **Executive Program in Financial Engineering — Sorbonne Université** (Nov 2026 – Jul 2027): stochastic calculus, Monte Carlo methods, high-frequency trading & microstructure, machine learning
+- 💼 10 years in data & pricing, 5 of them in financial markets: OTC operational risk at **Société Générale**, gas forward pricing on an **energy trading desk**
+- 🏅 **KX certified**: kdb+ Developer Level 2 · KX Python / PyKX Level 2
+- 🔎 **Open to** an internship / part-time role in capital markets or commodities — Paris, Mon–Thu, from November 2026
 
 ---
 
-### 🔧 Tech stack
+## Featured projects
 
-- **kdb+/q**: tick architecture (tickerplant, RDB, HDB), as-of joins, partitioned databases, IPC, performance tuning
-- **Python**: pandas, NumPy, SciPy, PyKX
-- **Data**: market data pipelines, tick data, time-series analytics
-- **Quant**: options pricing, Monte Carlo, market microstructure
-
-### 📂 Featured projects
-
-| Project | Description | Stack |
+| Project | What it does | Key result |
 |---|---|---|
-| [kdb-q-tick-data-analytics](https://github.com/matthieu-briche/kdb-q-tick-data-analytics) | Full kdb+ tick stack driven from Python with PyKX: tickerplant, RDB, partitioned HDB, chained TP, real-time engine and gateway written in q (VWAP, live spread, `aj` trade context, realised vol), fed by Hawkes-driven market data | kdb+/q, PyKX |
-| [kdb-hawkes-quote-simulator](https://github.com/matthieu-briche/kdb-hawkes-quote-simulator) | Intraday quote stream driven by Hawkes processes: vectorised simulation, statistical validation, partitioned HDB, tickerplant replay and MLE parameter recovery | kdb+/q |
-| [python-options-pricing](https://github.com/matthieu-briche/python-options-pricing) | European, Asian and American option pricing (Monte Carlo, QMC, Longstaff–Schwartz, CRR), Greeks, SVI smile on real AAPL chains, hedging backtests · 233 tests | Python, NumPy, Numba |
-| [python-lob-modelling](https://github.com/matthieu-briche/python-lob-modelling) | Limit order book driven by a bivariate Hawkes order flow, live animation and MLE calibration | Python, SciPy |
+| [**Hawkes quote simulator**](https://github.com/matthieu-briche/REPO_NAME) · q | End-to-end model of clustered quote arrivals for microstructure analysis: branching simulation, MLE calibration, statistical validation | ~530k quotes/day on 5 symbols, fully vectorised (no loops) · 95% CI coverage of 94/96/92% over 50 fits |
+| [**Real-time tick architecture**](https://github.com/matthieu-briche/kdb-q-tickdata-analytics) · q, PyKX | Tickerplant → RDB → HDB with chained TP, real-time engine publishing aggregates, real-time/historical gateway, VWAP & volatility APIs | Compressed HDB of 6.4M rows |
+| [**Execution quality & TCA**](https://github.com/matthieu-briche/REPO_NAME) · q | Best-ex and slippage via as-of joins, markouts from 1s to 5min, 15-min buckets, anomaly detection | ~157k NBBO updates, 10,000 executions across 5 brokers and 4 venues |
+| [**Options pricer**](https://github.com/matthieu-briche/REPO_NAME) · Python | Vanilla options pricer validated against QuantLib and real market data | 94.3% of a real AAPL option chain repriced inside the bid-ask |
+| [**Quant finance notes**](https://github.com/matthieu-briche/quant-finance-notes) | Mathematical notes on quantitative finance | — |
 
-### Currently
-Building market microstructure tooling in kdb+/q
-Reading Algorithmic and High-Frequency Trading (Cartea et al.) and Trades, Quotes and Prices (Bouchaud et al.)
-
-### 🎓 Education
-
-- MSc Applied Mathematics & Quantitative Finance – Université de Lille
-- Executive Program in Financial Engineering – Sorbonne University (from Nov 2026)
-
-### 🏅 Certifications
-
-[![q Developer Level 2](https://img.shields.io/badge/KX-q%20Developer%20Level%202-002B5C?style=for-the-badge)](assets/certif-q-developer-l2.png)
-[![Python-KDB-X Level 2](https://img.shields.io/badge/KX-Python--KDB--X%20Level%202-00A86B?style=for-the-badge)](assets/certif-kdbx-python-l2.png)
-
-- **q Developer Level 2**, KX Academy (March 2026)
-- **KDB-X Python Leve 2**, KX (March 2026)
-
-### Technical reading
-- *Q Tips* (Psaris)
-- *Algorithmic and High-Frequency Trading* (Cartea)
-- *Trades, Quotes and Prices* (Bouchaud)
-  
-### 📫 Contact
-Open to kdb+/q developer and market data engineering roles, in UK, Switzerland.
-
-[LinkedIn](https://www.linkedin.com/in/matthieu-briche-aa69b441/)
+### Validation, not just code
+The Hawkes simulator is checked with the **time-rescaling theorem** (KS test on compensator residuals), autocorrelation and **Fano factor**; the 10-day HDB is date-partitioned (`.Q.dpft`, `p#` on `sym`) with as-of joins on a 1 ms grid and x60 accelerated replay.
 
 ---
 
-<p align="center">
-  <img src="assets/q.png" alt="q" width="120">
-</p>
+## Tech stack
+
+**kdb+/q** · qSQL · as-of joins · IPC · tick architecture · attributes & query optimisation · PyKX
+**Python** (pandas, NumPy, pytest, scikit-learn, Prophet) · **SQL** · R · BigQuery · ETL pipelines · Git · Linux · Bash
+
+**Quant**: Black–Scholes · SABR · short-rate models (CIR, OU) · Hawkes processes · maximum likelihood · Monte Carlo · stochastic calculus · vanilla derivatives (swaps, options, forwards)
+
+---
+
+## Background
+
+- **M2 Applied Mathematics & Quantitative Finance** — Université de Lille (top 5%), 2016 · thesis: simulation of fractional Brownian motion and Hurst exponent estimation
+- **Data engineer**, fuel distribution group (23 subsidiaries, 150 stations) — sales forecasting engine in Python, daily price & volume time series
+- **Gas pricing analyst**, energy trading — multi-maturity forward pricing models (month / quarter / semester) with Reuters market data, daily P&L and position reporting
+
+📚 Currently reading: *Q Tips* (Psaris) · *Algorithmic and High-Frequency Trading* (Cartea) · *Trades, Quotes and Prices* (Bouchaud)
+
+---
+
+📫 [LinkedIn](https://linkedin.com/in/matthieu-briche-aa69b441) · matthieu.briche@gmail.com
