@@ -4,7 +4,7 @@
 
 - 🎓 **Executive Program in Financial Engineering — Sorbonne Université** (Nov 2026 – Jul 2027): stochastic calculus, Monte Carlo methods, high-frequency trading & microstructure, machine learning
 - 💼 10 years in data & pricing, 5 of them in financial markets: OTC operational risk at **Société Générale**, gas forward pricing on an **energy trading desk**
-- 🏅 **KX certified**: kdb+ Developer Level 2 · KX Python / PyKX Level 2
+- 🏅 **KX certified**: q Developer Level 2 · KDB-X Python Level 2 (+ KDB.AI Vector Database and PyKX courses)
 - 🔎 **Open to** an internship / part-time role in capital markets or commodities — Paris, Mon–Thu, from November 2026
 
 ---
@@ -22,6 +22,19 @@
 
 ### Validation, not just code
 The Hawkes simulator is checked with the **time-rescaling theorem** (KS test on compensator residuals), autocorrelation and **Fano factor**; the 10-day HDB is date-partitioned (`.Q.dpft`, `p#` on `sym`) with as-of joins on a 1 ms grid and x60 accelerated replay.
+
+---
+
+## Certifications
+
+<p>
+  <a href="assets/certif-q-developer-l2.png"><img src="assets/certif-q-developer-l2.png" alt="KX q Developer Level 2" height="130"></a>
+  <a href="assets/certif-kdbx-python-l2.png"><img src="assets/certif-kdbx-python-l2.png" alt="KX KDB-X Python Level 2" height="130"></a>
+  <a href="assets/certif-kdbai.png"><img src="assets/certif-kdbai.png" alt="KX KDB.AI Vector Database" height="130"></a>
+  <a href="assets/certif-pykx.png"><img src="assets/certif-pykx.png" alt="KX Introduction to PyKX" height="130"></a>
+</p>
+
+**q Developer Level 2** (Mar 2026) · **KDB-X Python Level 2** (Mar 2026) · KDB.AI Vector Database (Oct 2024) · Introduction to PyKX (Oct 2024)
 
 ---
 
