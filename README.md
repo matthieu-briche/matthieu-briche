@@ -49,7 +49,7 @@ The Hawkes simulator is checked with the **time-rescaling theorem** (KS test on 
 
 ## Background
 
-- **M2 Applied Mathematics & Quantitative Finance** — Université de Lille (top 5%), 2016 · thesis: simulation of fractional Brownian motion and Hurst exponent estimation
+- **M2 Applied Mathematics & Quantitative Finance** — Université de Lille, 2016 · thesis: simulation of fractional Brownian motion and Hurst exponent estimation
 - **Data engineer**, fuel distribution group (23 subsidiaries, 150 stations) — sales forecasting engine in Python, daily price & volume time series
 - **Gas pricing analyst**, energy trading — multi-maturity forward pricing models (month / quarter / semester) with Reuters market data, daily P&L and position reporting
 
