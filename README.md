@@ -13,11 +13,12 @@
 
 | Project | What it does | Key result |
 |---|---|---|
-| [**Hawkes quote simulator**](https://github.com/matthieu-briche/REPO_NAME) · q | End-to-end model of clustered quote arrivals for microstructure analysis: branching simulation, MLE calibration, statistical validation | ~530k quotes/day on 5 symbols, fully vectorised (no loops) · 95% CI coverage of 94/96/92% over 50 fits |
-| [**Real-time tick architecture**](https://github.com/matthieu-briche/kdb-q-tickdata-analytics) · q, PyKX | Tickerplant → RDB → HDB with chained TP, real-time engine publishing aggregates, real-time/historical gateway, VWAP & volatility APIs | Compressed HDB of 6.4M rows |
-| [**Execution quality & TCA**](https://github.com/matthieu-briche/REPO_NAME) · q | Best-ex and slippage via as-of joins, markouts from 1s to 5min, 15-min buckets, anomaly detection | ~157k NBBO updates, 10,000 executions across 5 brokers and 4 venues |
-| [**Options pricer**](https://github.com/matthieu-briche/REPO_NAME) · Python | Vanilla options pricer validated against QuantLib and real market data | 94.3% of a real AAPL option chain repriced inside the bid-ask |
-| [**Quant finance notes**](https://github.com/matthieu-briche/quant-finance-notes) | Mathematical notes on quantitative finance | — |
+| [**Hawkes quote simulator**](https://github.com/matthieu-briche/kdb-hawkes-quote-simulator) · q | End-to-end model of clustered quote arrivals for microstructure analysis: branching simulation, MLE calibration, statistical validation | ~530k quotes/day on 5 symbols, fully vectorised (no loops) · 95% CI coverage of 94/96/92% over 50 fits |
+| [**Real-time tick architecture**](https://github.com/matthieu-briche/kdb-q-tick-data-analytics) · q, PyKX | Tickerplant → RDB → HDB with chained TP, real-time engine publishing aggregates, real-time/historical gateway, VWAP & volatility APIs | Compressed HDB of 6.4M rows |
+| [**Execution quality & TCA**](https://github.com/matthieu-briche/kdb-execution-quality-tca) · q | Best-ex and slippage via as-of joins, markouts from 1s to 5min, 15-min buckets, anomaly detection | ~157k NBBO updates, 10,000 executions across 5 brokers and 4 venues |
+| [**Options pricer**](https://github.com/matthieu-briche/python-options-pricing) · Python | Vanilla options pricer validated against QuantLib and real market data | 94.3% of a real AAPL option chain repriced inside the bid-ask |
+| [**Microstructure clustering**](https://github.com/matthieu-briche/python-microclust) · Python | Clusters assets on how their order book works (order-sign memory, impact, tick regime), not on returns, and tests whether the clusters predict strategy transferability; hypotheses fixed before looking at real data | Families recovered on synthetic data (ARI 0.84) · pipeline runs end to end on Binance spot |
+| [**Hawkes limit order book**](https://github.com/matthieu-briche/python-lob-modelling) · Python | Order book driven by a bivariate buy/sell Hawkes process (Ogata thinning), recursive-likelihood MLE, analysis dashboard | Bivariate fit removes the μ bias of a univariate fit (2.43 → 2.03, true 2.0) · CI on Python 3.10–3.13 |
 
 ### Validation, not just code
 The Hawkes simulator is checked with the **time-rescaling theorem** (KS test on compensator residuals), autocorrelation and **Fano factor**; the 10-day HDB is date-partitioned (`.Q.dpft`, `p#` on `sym`) with as-of joins on a 1 ms grid and x60 accelerated replay.
