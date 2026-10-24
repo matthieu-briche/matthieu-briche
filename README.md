@@ -57,4 +57,4 @@ The Hawkes simulator is checked with the **time-rescaling theorem** (KS test on 
 
 ---
 
-📫 [LinkedIn](https://linkedin.com/in/matthieu-briche-aa69b441) · matthieu.briche@gmail.com
+📫 [LinkedIn](https://linkedin.com/in/matthieu-briche-aa69b441)
