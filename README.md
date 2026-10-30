@@ -11,18 +11,36 @@
 
 ## Featured projects
 
-| Project | What it does | Key result |
-|---|---|---|
-| [**Real-time tick platform & dashboard**](https://github.com/matthieu-briche/kdb-realtime-tick-dashboard) · q | kdb+tick written from scratch (feed, TP, RDB, RTE, HDB, gateway) with a live trading dashboard; incremental RTE analytics (OHLC, VWAP, notional, top of book); one gateway port serving q IPC (KX Dashboards, PyKX), HTTP and WebSocket | No data loss: daily TP log replayed on restart · automatic EOD to a date-partitioned HDB · dashboard queries cost O(symbols), not O(ticks) |
-| [**fi-algo: TorQ framework**](https://github.com/matthieu-briche/fi-algo) · q, TorQ | TorQ pipeline (segmented and chained TPs, RDB, WDB, HDB, gateway) fed by simulated government bonds on Ornstein–Uhlenbeck yield curves; fixed-income library in q (cash flows, accrued interest, price/yield, Newton–Raphson); rolling VWAP/TWAP | 12 government bonds (UST, Bunds, OATs) · qspec CI |
-| [**Day-ahead power price forecasting**](https://github.com/matthieu-briche/power-price-forecasting) · Python | Hourly day-ahead price forecasts for the German power market (DE-LU) on real Energy-Charts data: residual load, merit-order features, D-1/D-7 price lags; naive EPF benchmark, LEAR-style ridge and gradient boosting; walk-forward back-test with weekly retraining; forecasts valued through a 1 MW / 2 MWh battery strategy settled at realised prices; MongoDB, Docker, CI with leakage tests | Real data, 178-day out-of-sample test: gradient boosting halves the naive error (rMAE 0.53, MAE 12.1 €/MWh) · ridge captures 98% of perfect-foresight battery PnL: lowest error ≠ highest PnL |
-| [**Tick-data analytics platform**](https://github.com/matthieu-briche/kdb-q-tick-data-analytics) · q, PyKX | Full tick stack driven from Python (feed handler, TP, RDB, chained TP, RTE, HDB, gateway) fed by Hawkes-simulated quotes (vectorised NumPy); throttled real-time analytics (VWAP, spread in bps, live quote rate); gateway APIs for OHLC bars (`xbar`), slippage to mid (`aj`) and realised volatility | Compressed HDB of 6.4M rows · query-tuning benchmarks · CI on q and pytest suites |
-| [**Hawkes quote simulator**](https://github.com/matthieu-briche/kdb-hawkes-quote-simulator) · q | End-to-end modelling of clustered quote arrivals: branching-representation simulation fully vectorised in q (no explicit loops); MLE calibration with an O(n) log-likelihood and Nelder–Mead; goodness of fit via time-rescaling (KS test), autocorrelation and Fano factor | ~530k quotes/day across 5 symbols · 10-day date-partitioned HDB (`.Q.dpft`, `p#` on sym), `aj` on a 1 ms grid, x60 replay · 50 fits, 95% CI coverage of 94% / 96% / 92% for (μ, α, β) |
-| [**Options pricer**](https://github.com/matthieu-briche/python-options-pricing) · Python | Vanilla options pricing engine with Greeks, validated against QuantLib | 94.3% of a real AAPL option chain repriced within the bid–ask spread |
-| [**Execution quality & TCA**](https://github.com/matthieu-briche/kdb-execution-quality-tca) · q · KX Academy capstone | Best-execution and slippage analysis via `aj`; markouts from 1 s to 5 min; 15-min buckets (`xbar`); anomaly detection (`fby`), `lj`, correlations and IPC to a reference service | ~157k simulated NBBO updates · 10,000 executions (5 brokers, 4 venues) |
+**[Real-time tick platform & dashboard](https://github.com/matthieu-briche/kdb-realtime-tick-dashboard)** · q · [▶ live demo](https://matthieu-briche.github.io/kdb-realtime-tick-dashboard/web/index.html?demo)<br>
+kdb+tick written from scratch (feed, TP, RDB, RTE, HDB, gateway) with a live trading dashboard over WebSocket and KX Dashboards.<br>
+→ No data loss (TP log replay on restart) · automatic EOD to a partitioned HDB · dashboard queries in O(symbols), not O(ticks)
+
+**[Day-ahead power price forecasting](https://github.com/matthieu-briche/power-price-forecasting)** · Python<br>
+German power market (DE-LU) on real data: ridge and gradient boosting vs the naive EPF benchmark, walk-forward back-test, forecasts valued through a battery trading strategy.<br>
+→ Gradient boosting halves the naive error (rMAE 0.53) · ridge captures 98% of perfect-foresight PnL: lowest error ≠ highest PnL
+
+**[Hawkes quote simulator](https://github.com/matthieu-briche/kdb-hawkes-quote-simulator)** · q<br>
+Clustered quote arrivals simulated fully vectorised in q, MLE calibration (O(n) log-likelihood, Nelder–Mead), partitioned HDB and tickerplant replay.<br>
+→ ~530k quotes/day · 95% CI coverage of 94% / 96% / 92% for (μ, α, β) over 50 fits
+
+**[Fixed-income tick stack](https://github.com/matthieu-briche/fi-algo)** · q, TorQ<br>
+TorQ pipeline fed by government bonds on Ornstein–Uhlenbeck yield curves, with a fixed-income library in q (cash flows, price/yield, duration, DV01) and real-time risk.<br>
+→ 12 benchmarks (UST, Bunds, OATs) · qspec tests in CI
+
+**[Options pricer](https://github.com/matthieu-briche/python-options-pricing)** · Python<br>
+European, Asian and American options with Greeks: closed form, Monte Carlo, Longstaff–Schwartz, SVI smile calibration, hedging back-tests; validated against QuantLib.<br>
+→ 94.3% of a real AAPL option chain repriced within the bid–ask spread · 233 tests
+
+**[Tick-data analytics platform](https://github.com/matthieu-briche/kdb-q-tick-data-analytics)** · q, PyKX<br>
+Full tick stack driven from Python, fed by Hawkes-simulated quotes; gateway APIs for OHLC bars (`xbar`), slippage to mid (`aj`) and realised volatility.<br>
+→ Compressed HDB of 6.4M rows · query-tuning benchmarks
+
+**[Execution quality & TCA](https://github.com/matthieu-briche/kdb-execution-quality-tca)** · q · KX Academy capstone<br>
+Best-execution, slippage and markouts (1 s to 5 min) via `aj`; broker and venue scorecards; outlier detection with `fby`.<br>
+→ 10,000 executions vs ~157k NBBO updates (5 brokers, 4 venues)
 
 ### Validation, not just code
-The Hawkes simulator is checked with the **time-rescaling theorem** (KS test on compensator residuals), autocorrelation and **Fano factor**; the 10-day HDB is date-partitioned (`.Q.dpft`, `p#` on `sym`) with as-of joins on a 1 ms grid and x60 accelerated replay.
+Hawkes fits checked by the **time-rescaling theorem** (KS test), autocorrelation and **Fano factor** · options pricer benchmarked against **QuantLib** and real market quotes · power forecasts tested **walk-forward** with leakage tests · test suites run in **CI** (qspec for q, pytest for Python).
 
 ---
 
