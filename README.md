@@ -13,10 +13,12 @@
 
 | Project | What it does | Key result |
 |---|---|---|
-| [**Hawkes quote simulator**](https://github.com/matthieu-briche/kdb-hawkes-quote-simulator) · q | End-to-end model of clustered quote arrivals for microstructure analysis: branching simulation, MLE calibration, statistical validation | ~530k quotes/day on 5 symbols, fully vectorised (no loops) · 95% CI coverage of 94/96/92% over 50 fits |
-| [**Real-time tick architecture**](https://github.com/matthieu-briche/kdb-q-tick-data-analytics) · q, PyKX | Tickerplant → RDB → HDB with chained TP, real-time engine publishing aggregates, real-time/historical gateway, VWAP & volatility APIs | Compressed HDB of 6.4M rows |
-| [**Execution quality & TCA**](https://github.com/matthieu-briche/kdb-execution-quality-tca) · q | Best-ex and slippage via as-of joins, markouts from 1s to 5min, 15-min buckets, anomaly detection | ~157k NBBO updates, 10,000 executions across 5 brokers and 4 venues |
-| [**Options pricer**](https://github.com/matthieu-briche/python-options-pricing) · Python | Vanilla options pricer validated against QuantLib and real market data | 94.3% of a real AAPL option chain repriced inside the bid-ask |
+| [**Real-time tick platform & dashboard**](https://github.com/matthieu-briche/kdb-realtime-tick-dashboard) · q | kdb+tick from scratch (feed, TP, RDB, RTE, HDB, gateway) with a live dashboard; incremental RTE analytics (OHLC, VWAP, top of book); gateway serving q IPC, HTTP and WebSocket | No data loss: TP log replayed on restart · automatic EOD to a partitioned HDB · queries cost O(symbols), not O(ticks) |
+| [**Fixed-income tick stack**](https://github.com/matthieu-briche/fi-algo) · q, TorQ | TorQ pipeline (segmented/chained TPs, RDB, WDB, HDB, gateway) fed by simulated government bonds on OU yield curves; q bond pricing library (Newton–Raphson) | 12 government bonds (UST, Bunds, OATs) · qspec CI |
+| [**Tick-data analytics platform**](https://github.com/matthieu-briche/kdb-q-tick-data-analytics) · q, PyKX | Full tick stack driven from Python, fed by Hawkes-simulated quotes: tickerplant → RDB → HDB with chained TP, throttled real-time engine (VWAP, spread in bps, live quote rate), gateway APIs for OHLC bars (`xbar`), slippage to mid (`aj`) and realised volatility | Compressed HDB of 6.4M rows · query-tuning benchmarks · CI on q and pytest suites |
+| [**Hawkes quote simulator**](https://github.com/matthieu-briche/kdb-hawkes-quote-simulator) · q | End-to-end model of clustered quote arrivals for microstructure analysis: branching simulation, MLE calibration (Nelder–Mead, O(n) likelihood), statistical validation | ~530k quotes/day on 5 symbols, fully vectorised (no loops) · 10-day partitioned HDB · 95% CI coverage of 94/96/92% (μ, α, β) over 50 fits |
+| [**Options pricer**](https://github.com/matthieu-briche/python-options-pricing) · Python | Vanilla options pricer with Greeks, validated against QuantLib and real market data | 94.3% of a real AAPL option chain repriced inside the bid-ask |
+| [**Execution quality & TCA**](https://github.com/matthieu-briche/kdb-execution-quality-tca) · q | Best-ex and slippage via as-of joins, markouts from 1s to 5min (adverse selection), 15-min buckets, anomaly detection, IPC to a reference service | ~157k NBBO updates, 10,000 executions across 5 brokers and 4 venues |
 | [**Microstructure clustering**](https://github.com/matthieu-briche/python-microclust) · Python | Clusters assets on how their order book works (order-sign memory, impact, tick regime), not on returns, and tests whether the clusters predict strategy transferability; hypotheses fixed before looking at real data | Families recovered on synthetic data (ARI 0.84) · pipeline runs end to end on Binance spot |
 | [**Hawkes limit order book**](https://github.com/matthieu-briche/python-lob-modelling) · Python | Order book driven by a bivariate buy/sell Hawkes process (Ogata thinning), recursive-likelihood MLE, analysis dashboard | Bivariate fit removes the μ bias of a univariate fit (2.43 → 2.03, true 2.0) · CI on Python 3.10–3.13 |
 
@@ -40,7 +42,7 @@ The Hawkes simulator is checked with the **time-rescaling theorem** (KS test on 
 
 ## Tech stack
 
-**kdb+/q** · qSQL · as-of joins · IPC · tick architecture · attributes & query optimisation · PyKX
+**kdb+/q** · qSQL · as-of joins · IPC · tick architecture · attributes & query optimisation · TorQ · PyKX
 **Python** (pandas, NumPy, pytest, scikit-learn, Prophet) · **SQL** · R · BigQuery · ETL pipelines · Git · Linux · Bash
 
 **Quant**: Black–Scholes · SABR · short-rate models (CIR, OU) · Hawkes processes · maximum likelihood · Monte Carlo · stochastic calculus · vanilla derivatives (swaps, options, forwards)
