@@ -31,14 +31,6 @@ TorQ pipeline fed by government bonds on Ornstein–Uhlenbeck yield curves, with
 European, Asian and American options with Greeks: closed form, Monte Carlo, Longstaff–Schwartz, SVI smile calibration, hedging back-tests; validated against QuantLib.<br>
 → 94.3% of a real AAPL option chain repriced within the bid–ask spread · 233 tests
 
-**[Tick-data analytics platform](https://github.com/matthieu-briche/kdb-q-tick-data-analytics)** · q, PyKX<br>
-Full tick stack driven from Python, fed by Hawkes-simulated quotes; gateway APIs for OHLC bars (`xbar`), slippage to mid (`aj`) and realised volatility.<br>
-→ Compressed HDB of 6.4M rows · query-tuning benchmarks
-
-**[Execution quality & TCA](https://github.com/matthieu-briche/kdb-execution-quality-tca)** · q · KX Academy capstone<br>
-Best-execution, slippage and markouts (1 s to 5 min) via `aj`; broker and venue scorecards; outlier detection with `fby`.<br>
-→ 10,000 executions vs ~157k NBBO updates (5 brokers, 4 venues)
-
 ### Validation, not just code
 Hawkes fits checked by the **time-rescaling theorem** (KS test), autocorrelation and **Fano factor** · options pricer benchmarked against **QuantLib** and real market quotes · power forecasts tested **walk-forward** with leakage tests · test suites run in **CI** (qspec for q, pytest for Python).
 
@@ -78,3 +70,4 @@ Hawkes fits checked by the **time-rescaling theorem** (KS test), autocorrelation
 ---
 
 📫 [LinkedIn](https://linkedin.com/in/matthieu-briche-aa69b441)
+matthieu.briche@gmail;com
