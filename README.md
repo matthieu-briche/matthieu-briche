@@ -70,4 +70,5 @@ Hawkes fits checked by the **time-rescaling theorem** (KS test), autocorrelation
 ---
 
 📫 [LinkedIn](https://linkedin.com/in/matthieu-briche-aa69b441)
-matthieu.briche@gmail;com
+
+matthieu.briche@gmail.com
