@@ -19,10 +19,6 @@
 kdb+tick written from scratch (feed, TP, RDB, RTE, HDB, gateway) with a live trading dashboard over WebSocket and KX Dashboards.<br>
 → No data loss (TP log replay on restart) · automatic EOD to a partitioned HDB · dashboard queries in O(symbols), not O(ticks)
 
-**[Day-ahead power price forecasting](https://github.com/matthieu-briche/power-price-forecasting)** · Python<br>
-German power market (DE-LU) on real data: ridge and gradient boosting vs the naive EPF benchmark, walk-forward back-test, forecasts valued through a battery trading strategy.<br>
-→ Gradient boosting halves the naive error (rMAE 0.53) · ridge captures 98% of perfect-foresight PnL: lowest error ≠ highest PnL
-
 **[Hawkes quote simulator](https://github.com/matthieu-briche/kdb-hawkes-quote-simulator)** · q<br>
 Clustered quote arrivals simulated fully vectorised in q, MLE calibration (O(n) log-likelihood, Nelder–Mead), partitioned HDB and tickerplant replay.<br>
 → ~530k quotes/day · 95% CI coverage of 94% / 96% / 92% for (μ, α, β) over 50 fits
@@ -34,6 +30,10 @@ TorQ pipeline fed by government bonds on Ornstein–Uhlenbeck yield curves, with
 **[Options pricer](https://github.com/matthieu-briche/python-options-pricing)** · Python<br>
 European, Asian and American options with Greeks: closed form, Monte Carlo, Longstaff–Schwartz, SVI smile calibration, hedging back-tests; validated against QuantLib.<br>
 → 94.3% of a real AAPL option chain repriced within the bid–ask spread · 233 tests
+
+**[Day-ahead power price forecasting](https://github.com/matthieu-briche/power-price-forecasting)** · Python<br>
+German power market (DE-LU) on real data: ridge and gradient boosting vs the naive EPF benchmark, walk-forward back-test, forecasts valued through a battery trading strategy.<br>
+→ Gradient boosting halves the naive error (rMAE 0.53) · ridge captures 98% of perfect-foresight PnL: lowest error ≠ highest PnL
 
 ### Validation, not just code
 Hawkes fits checked by the **time-rescaling theorem** (KS test), autocorrelation and **Fano factor** · options pricer benchmarked against **QuantLib** and real market quotes · power forecasts tested **walk-forward** with leakage tests · test suites run in **CI** (qspec for q, pytest for Python).
