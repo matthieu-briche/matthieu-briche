@@ -1,6 +1,6 @@
 # Hi, I'm Matthieu 👋
 
-**kdb+/q Developer and Data Engineer** with 10 years of experience in data and pricing, including 5 years in financial markets (OTC operational risk at Société Générale; gas forward pricing on an energy trading desk). **Certified KX kdb+ Developer** (Level 2) and PyKX (Level 2); specialized in designing **real-time tick architectures** and market microstructure tools in q. Seeking an kdb position in capital markets, crypto, or commodities desks.
+**kdb+/q Developer and Data Engineer** with +8 years of experience in data and pricing, including 5 years in financial markets (OTC operational risk at Société Générale; gas forward pricing on an energy trading desk). **Certified KX kdb+ Developer** (Level 2) and PyKX (Level 2); specialized in designing **real-time tick architectures** and market microstructure tools in q. Seeking an kdb position in capital markets, crypto, or commodities desks.
 
 - 💼 +8 years in data & pricing, 5 of them in financial markets: OTC operational risk at **Société Générale**, gas forward pricing on an **energy trading desk**
 - 🏅 **KX certified**: q Developer Level 2 · KDB-X Python Level 2 (+ KDB.AI Vector Database and PyKX courses)
