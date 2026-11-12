@@ -1,15 +1,9 @@
 # Hi, I'm Matthieu 👋
 
-**kdb+/q Developer and Data Engineer** with 10 years of experience in data and pricing, including 5 years in financial markets (OTC operational risk at Société Générale; gas forward pricing on an energy trading desk). **Certified KX kdb+ Developer** (Level 2) and PyKX (Level 2); specialized in designing **real-time tick architectures** and market microstructure tools in q. Seeking an internship alongside my Sorbonne Executive Programme within capital markets, crypto, or commodities desks.
+**kdb+/q Developer and Data Engineer** with 10 years of experience in data and pricing, including 5 years in financial markets (OTC operational risk at Société Générale; gas forward pricing on an energy trading desk). **Certified KX kdb+ Developer** (Level 2) and PyKX (Level 2); specialized in designing **real-time tick architectures** and market microstructure tools in q. Seeking an kdb position in capital markets, crypto, or commodities desks.
 
-🎓 **Executive Program in Financial Engineering — Sorbonne Université** *(Nov 2026 – Jul 2027)*
-- **Quantitative Finance & Derivatives:** Black-Scholes, Heston, Dupire, SVI, interest rate models (HJM), American options (HJB), crypto/DeFi derivatives (AMM), and energy markets.
-- **Numerical Methods & ML:** Advanced Monte Carlo (GPU, variance reduction, QMC), Machine Learning in Python (PyTorch/TensorFlow), high-dimensional regression (GARCH, Copulas, PCA).
-- **Microstructure & HFT:** Order book modeling, high-frequency statistics, optimal algorithmic trading.
-
-- 💼 10 years in data & pricing, 5 of them in financial markets: OTC operational risk at **Société Générale**, gas forward pricing on an **energy trading desk**
+- 💼 +8 years in data & pricing, 5 of them in financial markets: OTC operational risk at **Société Générale**, gas forward pricing on an **energy trading desk**
 - 🏅 **KX certified**: q Developer Level 2 · KDB-X Python Level 2 (+ KDB.AI Vector Database and PyKX courses)
-- 🔎 **Open to** an internship / part-time role in capital markets or commodities — Paris, Mon–Thu, from November 2026
 
 ---
 
