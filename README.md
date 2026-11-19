@@ -13,6 +13,8 @@
 kdb+tick written from scratch (feed, TP, RDB, RTE, HDB, gateway) with a live trading dashboard over WebSocket and KX Dashboards.<br>
 → No data loss (TP log replay on restart) · automatic EOD to a partitioned HDB · dashboard queries in O(symbols), not O(ticks)
 
+UI/demo accelerated with Claude AI
+
 **[Hawkes quote simulator](https://github.com/matthieu-briche/kdb-hawkes-quote-simulator)** · q<br>
 Clustered quote arrivals simulated fully vectorised in q, MLE calibration (O(n) log-likelihood, Nelder–Mead), partitioned HDB and tickerplant replay.<br>
 → ~530k quotes/day · 95% CI coverage of 94% / 96% / 92% for (μ, α, β) over 50 fits
@@ -20,6 +22,8 @@ Clustered quote arrivals simulated fully vectorised in q, MLE calibration (O(n) 
 **[Fixed-income tick stack](https://github.com/matthieu-briche/fi-algo)** · q, TorQ<br>
 TorQ pipeline fed by government bonds on Ornstein–Uhlenbeck yield curves, with a fixed-income library in q (cash flows, price/yield, duration, DV01) and real-time risk.<br>
 → 12 benchmarks (UST, Bunds, OATs) · qspec tests in CI
+
+Architecture accelerated with Claude AI
 
 **[Options pricer](https://github.com/matthieu-briche/python-options-pricing)** · Python<br>
 European, Asian and American options with Greeks: closed form, Monte Carlo, Longstaff–Schwartz, SVI smile calibration, hedging back-tests; validated against QuantLib.<br>
